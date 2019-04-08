@@ -1,0 +1,52 @@
+<p class="social">
+    {% if site.facebook %}
+    <a href="{{ site.facebook }}" data-animate-hover="pulse" class="external facebook">
+        <i class="fa fa-facebook"></i>
+    </a>
+    {% endif %}
+    {% if site.googleplus %}
+    <a href="{{ site.googleplus }}" data-animate-hover="pulse" class="external gplus">
+        <i class="fa fa-google-plus"></i>
+    </a>
+    {% endif %}
+    {% if site.twitter %}
+    <a href="{{ site.twitter }}" data-animate-hover="pulse" class="external twitter">
+        <i class="fa fa-twitter"></i>
+    </a>
+    {% endif %}
+    {% if site.instagram %}
+    <a href="{{ site.instagram }}" title="" class="external instagram">
+        <i class="fa fa-instagram"></i>
+    </a>
+    {% endif %}
+    {% if site.email %}
+    <a href="mailto:{{ site.email }}" data-animate-hover="pulse" class="email">
+        <i class="fa fa-envelope"></i>
+    </a>
+    {% endif %}
+    {% if site.linkedin %}
+    <a href="{{ site.linkedin }}" data-animate-hover="pulse" class="external">
+        <i class="fa fa-linkedin"></i>
+    </a>
+    {% endif %}
+    {% if site.stackoverflow %}
+    <a href="{{ site.stackoverflow }}" data-animate-hover="pulse" class="external">
+        <i class="fa fa-stack-overflow"></i>
+    </a>
+    {% endif %}
+    {% if site.github %}
+    <a href="{{ site.github }}" data-animate-hover="pulse" class="external">
+        <i class="fa fa-github"></i>
+    </a>
+    {% endif %}
+    {% if site.youtube %}
+    <a href="{{ site.youtube }}" data-animate-hover="pulse" class="external">
+        <i class="fa fa-youtube"></i>
+    </a>
+    {% endif %}
+    {% if site.whatsapp %}
+    <a href="{{ site.whatsapp }}" data-animate-hover="pulse" class="external">
+        <i class="fa fa-whatsapp"></i>
+    </a>
+    {% endif %}
+</p>

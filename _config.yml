@@ -1,0 +1,31 @@
+title: Creative - Bootstrap Portfolio Theme by Bootstrapious.com
+email: your-email@example.com
+description:
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter: jekyllrb
+github:  jekyll
+facebook: jekyll
+instagram: jekyll
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
+copyright: 2018 Your name or company
+sidebarAbout: I am a creative illustrator and graphic designer with more than 10 years of experience.
+sidebarAbout2: Originally from Toronto, currently based in London.
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

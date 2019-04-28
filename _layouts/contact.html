@@ -1,0 +1,47 @@
+---
+layout: default
+---
+<div class="col-md-8 col-lg-9 content-column white-background">
+    {% include mobile_nav_toggle.html %}
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="content-column-content">
+                <h1>{{ page.title }}</h1>
+                {{ content }}
+                <h4>You can find me also on:</h4>
+                {% include social_buttons_in_contact.html %}
+                <h4>Drop me a line, maybe?</h4>
+                <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline.</p>
+                <form id="contact-form" method="post" action="{{ site.formspree }}" class="contact-form form">
+                    <div class="controls">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name">Your firstname *</label>
+                                    <input type="text" name="name" id="name" required="required" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="surname">Your lastname *</label>
+                                    <input type="text" name="surname" id="surname" required="required" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your email *</label>
+                            <input type="email" name="email" id="email" required="required" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your message for me *</label>
+                            <textarea rows="4" name="message" id="message" required="required" class="form-control"></textarea>
+                        </div>
+                        <div>
+                            <input type="submit" value="Send" class="btn btn-outline-primary">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

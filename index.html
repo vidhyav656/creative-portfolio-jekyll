@@ -4,20 +4,23 @@ layout: default
 <div class="col-md-8 col-lg-9 content-column">
     <div class="small-navbar d-flex d-md-none">
         <button type="button" data-toggle="offcanvas" class="btn btn-outline-primary"> <i class="fa fa-align-left mr-2"></i>Menu</button>
-        <h1 class="small-navbar-heading"> <a href="index.html">Creative </a></h1>
+        <h1 class="small-navbar-heading"> <a href="{{ site.url }}">Creative </a></h1>
     </div>
     <div class="grid row">
         <div class="col-md-6 col-lg-3 grid-item">
-            <div class="box-masonry"> <a href="detail.html" title="" class="box-masonry-image with-hover-overlay"><img src="img/a4-paper.jpg" alt="" class="img-fluid"></a>
-                <div class="box-masonry-hover-text-header"> <a href="detail.html" class="tile-link"> </a>
-                    <h4>Name of the work 1</h4>
+            {% for post in paginator.posts %}
+            <div class="box-masonry">
+                <a href="{{ post.url }}" title="{{ post.title }}" class="box-masonry-image with-hover-overlay"><img src="{{ post.image }}" alt="" class="img-fluid"></a>
+                <div class="box-masonry-hover-text-header"> <a href="{{ post.url }}" class="tile-link"> </a>
+                    <h4>{{ post.title }}</h4>
                     <div class="box-masonry-desription">
                         <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life. One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. </p>
                     </div>
                 </div>
             </div>
+             {% endfor %}
         </div>
-        <div class="col-md-6 col-lg-3 grid-item">
+       <!--  <div class="col-md-6 col-lg-3 grid-item">
             <div class="box-masonry"> <a href="detail.html" title="" class="box-masonry-image with-hover-overlay with-hover-icon"><img src="img/business-card-26.jpg" alt="" class="img-fluid"></a>
                 <div class="box-masonry-text">
                     <h4> <a href="detail.html">Name of the work 2</a></h4>
@@ -116,6 +119,6 @@ layout: default
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>

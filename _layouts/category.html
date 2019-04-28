@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<div class="col-xs-12 col-sm-8 col-md-9 content-column white-background">
+    {% include mobile_nav_toggle.html %}
+    <h1>Posts From {{page.title}}</h1>
+    {% for post in site.categories[page.category] %}
+    <article class="post" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+            <ul>
+                <li><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%-d %b, %Y" }}</time></li>
+                {% if site.show_categories == 1 and post.category %}
+                <li class="cats">
+                    {% for category in post.category %}
+                    <a href="{{site.baseurl}}/{{site.category_dir}}/{{category}}/">{{ category }}</a>
+                    {% endfor %}
+                </li>
+                {% endif %}
+            </ul>
+            <h2 itemprop="name headline"><a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}</a></h2>
+        </header>
+        <div class="post-content">
+            {{ post.excerpt }}
+            {% if post.excerpt != post.content %}
+            <p><a href="{{ post.url }}" role="button">Read More</a></p>
+            {% endif %}
+        </div>
+    </article>
+    {% endfor %}
+</div>

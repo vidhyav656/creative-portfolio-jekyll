@@ -2,15 +2,24 @@
     <div class="sidebar-content">
         <h1 class="sidebar-heading"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
         <p class="sidebar-p">{{ site.sidebarAbout }} </p>
-        <p class="sidebar-p">{{ site.sidebarAbout2 }} </p>
-        <ul class="sidebar-menu">
+
+        {% if site.pages %}
+         <ul class="sidebar-menu">
             <!-- Link-->
-            <li class="sidebar-item"><a href="index.html" class="sidebar-link active">Home</a></li>
-            <!-- Link-->
-            <li class="sidebar-item"><a href="about.html" class="sidebar-link">About</a></li>
-            <!-- Link-->
-            <li class="sidebar-item"><a href="contact.html" class="sidebar-link">Get in touch</a></li>
+            <li class="sidebar-item">
+                <a href="{{ site.baseurl | prepend: site.url }}" class="sidebar-link {% if page.url == '/' %} active {% endif %}">Home</a>
+            </li>
+            {% for p in site.pages %}
+            {% if p.layout == 'contact' or p.layout == 'page' %}
+                <!-- Link-->
+                <li class="sidebar-item">
+                    <a href="{{ p.url | prepend: site.baseurl | prepend: site.url }}" class="sidebar-link {% if p.url == page.url %} active {% endif %}">{{ p.title }}</a>
+                </li>
+            {% endif %}
+            {% endfor %}
         </ul>
+        {% endif %}
+
         {% include social_buttons_in_sidebar.html %}
         <div class="copyright text-center text-md-left">
             <p class="credit">

@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<div class="col-xs-12 col-sm-8 col-md-9 content-column white-background">
+    {% include mobile_nav_toggle.html %}
+    <div class="row">
+        <div class="col-xl-10">
+            <div class="content-column-content">
+                <h1>{{ title }}</h1>
+                {{ content }}
+                {% if page.comments and site.show_comments == 1 %}
+                {% include disqus.html %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

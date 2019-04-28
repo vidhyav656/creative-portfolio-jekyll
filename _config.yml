@@ -9,14 +9,23 @@ facebook: jekyll
 instagram: jekyll
 
 # Build settings
-markdown: kramdown
-theme: minima
+markdown: CommonMark
+commonmark:
+  options: ["SMART", "FOOTNOTES"]
+  extensions: ["strikethrough", "autolink", "table"]
+
 plugins:
+  - jekyll-archives
+  - jekyll-commonmark
   - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
 
 copyright: 2018 Your name or company
-sidebarAbout: I am a creative illustrator and graphic designer with more than 10 years of experience.
-sidebarAbout2: Originally from Toronto, currently based in London.
+sidebarAbout: I am a creative illustrator and graphic designer with more than 10 years of experience.Originally from Toronto, currently based in London.
 
 # Pages path
 defaults:
@@ -28,20 +37,29 @@ defaults:
 # Outputting
 permalink: pretty
 
-# Includes
-include: ["_pages"]
+# Pagination
+paginate: 10
+paginate_path: "/page:num/"
 
 # Contact Page
 formspree:
 
+# Includes
+include: ["_pages"]
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .jekyll-cache
+
+
+
+

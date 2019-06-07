@@ -7,7 +7,7 @@ layout: default
         <div class="col-xl-10">
             <div class="content-column-content">
                 <h1>{{ page.title }}</h1>
-                <img src="{{ page.image }}" alt="" class="img-fluid">
+                <img src="{{ page.image }}" class="img-fluid">
                 {{ content }}
                 {% if page.comments and site.show_comments == 1 %}
                 {% include disqus.html %}

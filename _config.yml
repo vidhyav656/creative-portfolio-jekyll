@@ -2,11 +2,27 @@ title: Creative
 email: your-email@example.com
 description:
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://vidhyav656.github.io/creative-portfolio-jekyll/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://vidhyav656.github.io/creative-portfolio-jekyll" # the base hostname & protocol for your site, e.g. http://example.com
+copyright: 2018 Your name or company
+sidebarAbout: I am a creative illustrator and graphic designer with more than 10 years of experience.Originally from Toronto, currently based in London.
+analytics_code: UA-XXXXXXX-2
+disqus: your_disqus_site
+
+# Social Accounts
 twitter: jekyllrb
 github:  jekyll
 facebook: jekyll
 instagram: jekyll
+#googleplus:
+#linkedin:
+#stackoverflow:
+#youtube:
+#whatsapp:
+
+# Modules Settings
+show_categories: 0
+show_tags: 0
+show_comments: 1
 
 # Build settings
 markdown: CommonMark
@@ -23,9 +39,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-paginate
-
-copyright: 2018 Your name or company
-sidebarAbout: I am a creative illustrator and graphic designer with more than 10 years of experience.Originally from Toronto, currently based in London.
 
 # Pages path
 defaults:

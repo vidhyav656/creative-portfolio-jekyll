@@ -2,7 +2,7 @@
 layout: post
 title:  Sample Data
 permalink: sample-data
-image: img/sample-data.jpg
+image: sample-data.jpg
 ---
 
 Markdown (or Textile), Liquid, HTML & CSS go in. Static sites come out ready for deployment.

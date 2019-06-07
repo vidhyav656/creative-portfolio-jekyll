@@ -10,7 +10,7 @@ layout: default
         {% for post in paginator.posts %}
         <div class="col-md-6 col-lg-3 grid-item">
             <div class="box-masonry">
-                <a href="{{ post.url }}" title="{{ post.title }}" class="box-masonry-image with-hover-overlay with-hover-icon"><img src="{{ post.image }}" class="img-fluid"></a>
+                <a href="{{ post.url }}" title="{{ post.title }}" class="box-masonry-image with-hover-overlay with-hover-icon"><img src="{{ post.image | prepend: '/img/' | prepend: site.url }}" class="img-fluid"></a>
                 <div class="box-masonry-text"> <a href="{{ post.url }}" class="tile-link"> </a>
                     <h4>{{ post.title }}</h4>
                     <div class="box-masonry-desription">
@@ -21,4 +21,27 @@ layout: default
         </div>
         {% endfor %}
     </div>
+    {% if paginator.total_pages > 1 %}
+    <div class="pagination">
+        {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Prev</a>
+        {% else %}
+        <span>&laquo; Prev</span>
+        {% endif %}
+        {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+        <em>{{ page }}</em>
+        {% elsif page == 1 %}
+        &nbsp;<a href="{{ paginator.previous_page_path | relative_url }}">{{ page }}</a>&nbsp;
+        {% else %}
+        &nbsp;<a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>&nbsp;
+        {% endif %}
+        {% endfor %}
+        {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
+        {% else %}
+        <span>Next &raquo;</span>
+        {% endif %}
+    </div>
+    {% endif %}
 </div>

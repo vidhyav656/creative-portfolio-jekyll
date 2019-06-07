@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Name of the work 1
-image: img/a4-paper.jpg
+image: a4-paper.jpg
 permalink: prototypes-of-an-mobile-app-for-vodafone
 excerpt: Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life. One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
 ---

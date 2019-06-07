@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Installation
-image: img/install.jpg
+image: install.jpg
 
 ---
 I assume you have already downloaded and installed Ruby. Here's what you need to do next:

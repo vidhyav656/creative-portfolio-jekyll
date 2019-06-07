@@ -10,8 +10,8 @@ layout: default
         {% for post in paginator.posts %}
         <div class="col-md-6 col-lg-3 grid-item">
             <div class="box-masonry">
-                <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" title="{{ post.title }}" class="box-masonry-image with-hover-overlay with-hover-icon"><img src="{{ post.image | prepend: '/img/' | prepend: site.url }}" class="img-fluid"></a>
-                <div class="box-masonry-text"> <a href="{{ post.url }}" class="tile-link"> </a>
+                <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" title="{{ post.title }}" class="box-masonry-image with-hover-overlay with-hover-icon"><img src="{{ post.image | prepend: '/img/' | prepend: site.baseurl | prepend: site.url }}" class="img-fluid"></a>
+                <div class="box-masonry-text"> <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" class="tile-link"> </a>
                     <h4>{{ post.title }}</h4>
                     <div class="box-masonry-desription">
                         <p> {{ post.excerpt }} </p>

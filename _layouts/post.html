@@ -8,7 +8,7 @@ layout: default
             <div class="content-column-content">
                 {% include breadcrumbs.html %}
                 <h1>{{ page.title }}</h1>
-                <img src="{{ page.image | prepend: '/img/' | prepend: site.url }}" class="img-fluid">
+                <img src="{{ page.image | prepend: '/img/' | prepend: site.baseurl | prepend: site.url }}" class="img-fluid">
                 {{ content }}
                 {% if page.comments and site.show_comments == 1 %}
                 {% include disqus.html %}

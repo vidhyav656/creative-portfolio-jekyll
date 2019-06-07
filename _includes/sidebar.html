@@ -7,7 +7,7 @@
          <ul class="sidebar-menu">
             <!-- Link-->
             <li class="sidebar-item">
-                <a href="{{ site.baseurl | prepend: site.url }}" class="sidebar-link {% if page.url == '/' %} active {% endif %}">Home</a>
+                <a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}" class="sidebar-link {% if page.url == '/' %} active {% endif %}">Home</a>
             </li>
             {% for p in site.pages %}
             {% if p.layout == 'contact' or p.layout == 'page' %}

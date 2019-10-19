@@ -14,11 +14,11 @@ Far far away, behind the word mountains, far from the countries Vokalia and Cons
 
 <div id="main-slider" class="owl-carousel owl-theme">
 
-<div class="item">![](img/slider/3.jpg)</div>
+<div class="item"><img src="img/slider/3.jpg" alt="" class="img-fluid"></div>
 
-<div class="item">![](img/slider/2.jpg)</div>
+<div class="item"><img src="img/slider/2.jpg" alt="" class="img-fluid"></div>
 
-<div class="item">![](img/slider/1.jpg)</div>
+<div class="item"><img src="img/slider/1.jpg" alt="" class="img-fluid"></div>
 
 </div>
 
